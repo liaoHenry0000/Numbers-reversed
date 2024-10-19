@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+int main() {
+    std::string input;
+    char choice;
+
+    do {
+        // 輸入整數
+        std::cout << "請輸入一個整數：";
+        std::cin >> input;
+
+        // 倒轉字串
+        std::reverse(input.begin(), input.end());
+
+        // 輸出結果
+        std::cout << "翻轉過後的數字是：" << input << std::endl;
+
+        // 詢問使用者是否要繼續
+        std::cout << "要繼續輸入嗎？(y/n): ";
+        std::cin >> choice;
+
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
+}
